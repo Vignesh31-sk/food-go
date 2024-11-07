@@ -7,6 +7,8 @@ import Footer from "./components/Footer";
 import PaymentPage from "./components/PaymentPage";
 import Menu from "./components/Menu"; // Import Menu component
 import About from "./components/About"; // Import About component
+import Login from "./components/Login";
+import Home from "./components/Home";
 
 function App() {
   const foodItems = [
@@ -21,40 +23,13 @@ function App() {
   ];
 
   return (
-    <div>
-      <Navbar />
-      <HeroText />
-
-      {/* Define Routes */}
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-around",
-                padding: "20px",
-              }}
-            >
-              {foodItems.map((item, index) => (
-                <FoodCard
-                  key={index}
-                  name={item.name}
-                  description={item.description}
-                  imageUrl={item.imageUrl}
-                />
-              ))}
-            </div>
-          }
-        />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/payment" element={<PaymentPage />} />
-      </Routes>
-
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/home" element={<Home />} />
+      <Route path="/menu" element={<Menu />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/payment" element={<PaymentPage />} />
+      <Route path="/" element={<Login />} />
+    </Routes>
   );
 }
 
