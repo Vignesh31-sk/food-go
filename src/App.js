@@ -5,6 +5,8 @@ import HeroText from "./components/HeroText";
 import FoodCard from "./components/FoodCard";
 import Footer from "./components/Footer";
 import PaymentPage from "./components/PaymentPage";
+import Menu from "./components/Menu"; // Import Menu component
+import About from "./components/About"; // Import About component
 
 function App() {
   const foodItems = [
@@ -46,6 +48,8 @@ function App() {
             </div>
           }
         />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/about" element={<About />} />
         <Route path="/payment" element={<PaymentPage />} />
       </Routes>
 

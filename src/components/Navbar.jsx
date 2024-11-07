@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -23,24 +24,27 @@ function Navbar() {
         }}
       >
         <li>
-          <a href="#" style={{ color: "white", textDecoration: "none" }}>
+          <Link to="/" style={{ color: "white", textDecoration: "none" }}>
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" style={{ color: "white", textDecoration: "none" }}>
+          <Link to="/menu" style={{ color: "white", textDecoration: "none" }}>
             Menu
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" style={{ color: "white", textDecoration: "none" }}>
+          <Link to="/about" style={{ color: "white", textDecoration: "none" }}>
             About
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" style={{ color: "white", textDecoration: "none" }}>
+          <Link
+            to="/contact"
+            style={{ color: "white", textDecoration: "none" }}
+          >
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
