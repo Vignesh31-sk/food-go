@@ -2,20 +2,45 @@ import React from "react";
 
 function Navbar() {
   return (
-    <nav style={{ padding: "10px", backgroundColor: "#f8f8f8" }}>
-      <h2>Food App</h2>
-      <ul style={{ listStyle: "none", display: "flex", gap: "15px" }}>
+    <nav
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "10px 20px",
+        backgroundColor: "#4caf50",
+        color: "white",
+      }}
+    >
+      <div style={{ fontSize: "24px", fontWeight: "bold" }}>Food App</div>
+      <ul
+        style={{
+          display: "flex",
+          listStyle: "none",
+          gap: "20px",
+          margin: 0,
+          padding: 0,
+        }}
+      >
         <li>
-          <a href="#">Home</a>
+          <a href="#" style={{ color: "white", textDecoration: "none" }}>
+            Home
+          </a>
         </li>
         <li>
-          <a href="#">Menu</a>
+          <a href="#" style={{ color: "white", textDecoration: "none" }}>
+            Menu
+          </a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a href="#" style={{ color: "white", textDecoration: "none" }}>
+            About
+          </a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a href="#" style={{ color: "white", textDecoration: "none" }}>
+            Contact
+          </a>
         </li>
       </ul>
     </nav>

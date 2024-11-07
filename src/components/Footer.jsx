@@ -4,27 +4,34 @@ function Footer() {
   return (
     <footer
       style={{
-        padding: "10px",
+        backgroundColor: "#333",
+        color: "#fff",
+        padding: "20px",
         textAlign: "center",
-        backgroundColor: "#f8f8f8",
-        marginTop: "20px",
+        fontSize: "14px",
       }}
     >
-      <p>© 2024 Food App. All Rights Reserved.</p>
-      <p>
-        Follow us on:
-        <a href="#" style={{ margin: "0 5px" }}>
+      <p style={{ margin: "5px 0" }}>© 2024 Food App. All Rights Reserved.</p>
+      <div style={{ marginTop: "10px" }}>
+        <a
+          href="#"
+          style={{ color: "#ffcc80", textDecoration: "none", margin: "0 10px" }}
+        >
           Facebook
-        </a>{" "}
-        |
-        <a href="#" style={{ margin: "0 5px" }}>
+        </a>
+        <a
+          href="#"
+          style={{ color: "#ffcc80", textDecoration: "none", margin: "0 10px" }}
+        >
           Instagram
-        </a>{" "}
-        |
-        <a href="#" style={{ margin: "0 5px" }}>
+        </a>
+        <a
+          href="#"
+          style={{ color: "#ffcc80", textDecoration: "none", margin: "0 10px" }}
+        >
           Twitter
         </a>
-      </p>
+      </div>
     </footer>
   );
 }
