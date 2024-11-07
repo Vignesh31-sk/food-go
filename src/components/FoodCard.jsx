@@ -1,6 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function FoodCard({ name, description, imageUrl }) {
+  const navigate = useNavigate();
+
+  const handleOrderNow = () => {
+    navigate("/payment"); // Redirects to the dummy payment page
+  };
+
   return (
     <div
       style={{
@@ -38,6 +45,7 @@ function FoodCard({ name, description, imageUrl }) {
           }}
           onMouseOver={(e) => (e.target.style.backgroundColor = "#e64a19")}
           onMouseOut={(e) => (e.target.style.backgroundColor = "#ff5722")}
+          onClick={handleOrderNow}
         >
           Order Now
         </button>
