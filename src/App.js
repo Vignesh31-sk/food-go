@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/Navbar";
+import HeroText from "./components/HeroText";
+import FoodCard from "./components/FoodCard";
+import Footer from "./components/Footer";
 
 function App() {
+  const foodItems = [
+    {
+      name: "Pizza",
+      description: "Cheesy and delicious",
+      imageUrl: "pizza3.png",
+    },
+    { name: "Burger", description: "Juicy and tasty", imageUrl: "pizza3.png" },
+    { name: "Pasta", description: "Creamy and savory", imageUrl: "pizza3.png" },
+    { name: "Salad", description: "Fresh and healthy", imageUrl: "pizza3.png" },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <HeroText />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          padding: "20px",
+        }}
+      >
+        {foodItems.map((item, index) => (
+          <FoodCard
+            key={index}
+            name={item.name}
+            description={item.description}
+            imageUrl={item.imageUrl}
+          />
+        ))}
+      </div>
+      <Footer />
     </div>
   );
 }
