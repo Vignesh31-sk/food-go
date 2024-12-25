@@ -1,0 +1,27 @@
+/* Todo: Add responsiveness*/
+body {
+  background-color: red;
+  justify-items: center;
+}
+
+.container {
+  border: white solid;
+  border-radius: 50px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  height: 50rem;
+  justify-content: space-between;
+}
+
+.img {
+  justify-content: left;
+  height: auto;
+  max-width: 50%;
+}
+
+#title {
+  color: white;
+  text-align: center;
+  /*Todo: Bring title to center.*/
+}
