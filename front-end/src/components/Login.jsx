@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./Login.css";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [userData, setUserData] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("/userData.json") // Replace with your API endpoint if necessary
@@ -18,6 +22,7 @@ const Login = () => {
     );
     if (user) {
       setMessage("Login successful! Welcome, admin.");
+      navigate("/home"); // Redirect to homepage
     } else {
       setMessage("Invalid username or password.");
     }

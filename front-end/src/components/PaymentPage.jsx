@@ -6,7 +6,7 @@ function PaymentPage() {
 
   const handleOrderPlaced = () => {
     alert("Order placed successfully!");
-    navigate("/"); // Redirect to homepage
+    navigate("/home"); // Redirect to homepage
   };
 
   return (

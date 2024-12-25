@@ -24,7 +24,7 @@ function Navbar() {
         }}
       >
         <li>
-          <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+          <Link to="/home" style={{ color: "white", textDecoration: "none" }}>
             Home
           </Link>
         </li>
@@ -38,14 +38,11 @@ function Navbar() {
             About
           </Link>
         </li>
-        <li>
-          <Link
-            to="/contact"
-            style={{ color: "white", textDecoration: "none" }}
-          >
+        {/* <li>
+          <Link to="/home" style={{ color: "white", textDecoration: "none" }}>
             Contact
           </Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
